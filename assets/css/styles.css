@@ -35,13 +35,8 @@ body {overflow: hidden;}
 }
 
 @keyframes drift {
-	from {
-		transform: translate(-50%, -50%);
-		opacity: 0.6;
-	}
-	to {
-		transform: calc(-50% + 100px) calc(-50% + 100px)
+
+		transform: calc(-50% + 100px) 
+				   calc(-50% + 100px)
 		scale(0.5);
-		opacity: 0;
 	}
-}
