@@ -1,6 +1,10 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
+head {
+	<link rel="stylesheet" href="./assets/css/styles.css">
+}
+
 body {
 	font-family: 'Shadows Into Light', cursive;
 	color: white;
