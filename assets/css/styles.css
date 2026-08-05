@@ -42,8 +42,8 @@ body {overflow: hidden;}
 
 	to {
 		transform: translate(
-		calc(-50% + 120px)
-		calc(-50% + 120px)
+		calc(-50% + 250px)
+		calc(-50% + 250px)
 		) scale(0.5);
 		opacity: 0;
 	}
