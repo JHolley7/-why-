@@ -4,7 +4,7 @@
 body {
 	font-family: 'Shadows Into Light', cursive;
 	color: white;
-	font-size: 8px;
+	font-size: 40px;
 	margin: 0;
 	padding: 0;
 }
@@ -36,7 +36,8 @@ body {overflow: hidden;}
 
 @keyframes drift {
 
-		transform: calc(-50% + 100px) 
-				   calc(-50% + 100px)
-		scale(0.5);
+		transform: translate(
+		calc(-50% + var(--x)) 
+		calc(-50% + var(--y))
+		) scale(0.5);
 	}
