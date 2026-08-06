@@ -2,8 +2,17 @@
 
 const container = document.querySelector('.container');
 const original = document.querySelector('.message');
+const answer = document.getElementById('answer');
+
+function showAnswer() {
+	if (answer) {
+		answer.textContent = 'I create because it is fun.';
+	}
+}
 
 function createBurst() {
+	if (!container || !original) return;
+
 	for (let i = 0; i < 24; i++) {
 		const clone = original.cloneNode(true);
 		clone.classList.add('echo');
@@ -24,6 +33,10 @@ function createBurst() {
 	}
 }
 
-createBurst();
-setInterval(createBurst, 1000);
-container.addEventListener('click', createBurst);
+if (container && original) {
+	createBurst();
+	setInterval(createBurst, 1000);
+	container.addEventListener('click', createBurst);
+}
+
+document.addEventListener('click', showAnswer);
