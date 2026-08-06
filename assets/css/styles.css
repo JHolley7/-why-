@@ -37,7 +37,7 @@ body {
 	color: white;
 	opacity: 0.85;
 	pointer-events: none;
-	animation: drift var(--duration, 1s) ease-out forwards;
+	animation: drift var(--duration, .05s) ease-out forwards;
 	animation-delay: var(--delay, 0s);
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
 }
