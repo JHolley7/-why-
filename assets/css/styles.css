@@ -4,7 +4,7 @@
 body {
 	font-family: 'Shadows Into Light', cursive;
 	color: white;
-	font-size: 40px;
+	font-size: 20px;
 	margin: 0;
 	padding: 0;
 	background-color: black;
@@ -27,6 +27,10 @@ body {
 	text-align: center;
 	white-space: nowrap;
 	color: white;
+	background: linear-gradient(135deg, #2f8fff, #1b5cff);
+	padding: 6px 10px;
+	border-radius: 10px;
+	box-shadow: 0 0 12px rgba(31, 92, 255, 0.35);
 }
 
 .echo {
@@ -40,6 +44,10 @@ body {
 	animation: drift var(--duration, .05s) ease-out forwards;
 	animation-delay: var(--delay, 0s);
 	text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+	background: linear-gradient(135deg, #2f8fff, #1b5cff);
+	padding: 4px 8px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(31, 92, 255, 0.25);
 }
 
 @keyframes drift {
