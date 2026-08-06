@@ -3,14 +3,27 @@
 const container = document.querySelector('.container');
 const original = document.querySelector('.message');
 
-const clone = original.cloneNode(true);
+function createBurst() {
+	for (let i = 0; i < 24; i++) {
+		const clone = original.cloneNode(true);
+		clone.classList.add('echo');
 
-container.appendChild(clone);
+		const angle = (Math.PI * 2 * i) / 24;
+		const distance = 50 + Math.random() * 220;
+		const x = Math.cos(angle) * distance;
+		const y = Math.sin(angle) * distance;
+		const duration = 0.8 + Math.random() * 0.4;
 
-clone.classList.add('echo');
+		clone.style.setProperty('--x', `${x}px`);
+		clone.style.setProperty('--y', `${y}px`);
+		clone.style.setProperty('--duration', `${duration}s`);
+		clone.style.setProperty('--delay', `${i * 0.01}s`);
 
-for (let i = 0; i < 20; i++) {
-  const clone = original.cloneNode(true);
-  clone.classList.add('echo');
-  container.appendChild(clone);
+		container.appendChild(clone);
+		setTimeout(() => clone.remove(), 1400);
+	}
 }
+
+createBurst();
+setInterval(createBurst, 1000);
+container.addEventListener('click', createBurst);

@@ -7,18 +7,16 @@ body {
 	font-size: 40px;
 	margin: 0;
 	padding: 0;
-}
-
-html {
 	background-color: black;
+	overflow: hidden;
 }
-
-body {overflow: hidden;}
 
 .container {
 	position: relative;
 	width: 100%;
 	height: 100vh;
+	overflow: hidden;
+	background-color: black;
 }
 
 .message {
@@ -27,24 +25,34 @@ body {overflow: hidden;}
 	left: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	white-space: nowrap;
+	color: white;
 }
 
 .echo {
-	animation: drift 1s linear forwards;
-	opacity: 0.6;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	opacity: 0.85;
+	pointer-events: none;
+	animation: drift var(--duration, 1s) ease-out forwards;
+	animation-delay: var(--delay, 0s);
+	text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
 }
 
 @keyframes drift {
-	from {
-		transform: translate(-50% + 50px)
-		scale(1)
-		opacity: .6;
-
-	to {
-		transform: translate(
-		calc(-50% + 250px)
-		calc(-50% + 250px)
-		) scale(0.5);
+	0% {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0.85;
+	}
+	100% {
+		top: calc(50% + var(--y, 0px));
+		left: calc(50% + var(--x, 0px));
+		transform: translate(-50%, -50%) scale(0.45);
 		opacity: 0;
 	}
-	}
+}
