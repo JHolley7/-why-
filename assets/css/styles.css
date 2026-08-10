@@ -23,11 +23,16 @@ body {
 	justify-content: center;
 }
 
-.prompt,
-.answer {
+.prompt {
 	margin: 0 0 1rem;
 	font-size: 1.4rem;
 	color: #7ec8ff;
+}
+
+.answer {
+	margin: 0 0 1rem;
+	font-size: 1.4rem;
+	color: white;
 }
 
 .answer:hover {
