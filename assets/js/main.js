@@ -20,7 +20,7 @@ function showAnswer2() {
 
 function showAnswer3() {
 	if (answer3) {
-		answer3.innerHTML = 'I create because its <b>Who I Am</b>.';
+		answer3.innerHTML = 'I create because its <b>WHO I AM</b>.';
 	}
 }
 
