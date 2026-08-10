@@ -4,6 +4,7 @@ const container = document.querySelector('.container');
 const original = document.querySelector('.message');
 const answer = document.getElementById('answer');
 const answer2 = document.getElementById('answer2');
+const answer3 = document.getElementById('answer3');
 
 function showAnswer() {
 	if (answer) {
@@ -13,7 +14,13 @@ function showAnswer() {
 
 function showAnswer2() {
 	if (answer2) {
-		answer2.textContent = 'I create because I want to express myself and share my ideas with the world. Creating allows me to explore new concepts, challenge myself, and connect with others who appreciate my work. It is a way for me to leave a mark and contribute to the cultural landscape.';
+		answer2.textContent = 'I create because its how I express myself.';
+	}
+}
+
+function showAnswer3() {
+	if (answer3) {
+		answer3.innerHTML = 'I create because its <b>Who I Am</b>.';
 	}
 }
 
@@ -26,6 +33,8 @@ function revealNextAnswer() {
 		showAnswer();
 	} else if (clickCount === 2) {
 		showAnswer2();
+	} else if (clickCount === 3) {
+		showAnswer3();
 	}
 }
 
