@@ -8,7 +8,7 @@ const answer3 = document.getElementById('answer3');
 
 function showAnswer() {
 	if (answer) {
-		answer.textContent = 'I create because it is fun.';
+		answer.textContent = 'I create because its fun.';
 	}
 }
 
