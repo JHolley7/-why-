@@ -3,10 +3,29 @@
 const container = document.querySelector('.container');
 const original = document.querySelector('.message');
 const answer = document.getElementById('answer');
+const answer2 = document.getElementById('answer2');
 
 function showAnswer() {
 	if (answer) {
 		answer.textContent = 'I create because it is fun.';
+	}
+}
+
+function showAnswer2() {
+	if (answer2) {
+		answer2.textContent = 'I create because I want to express myself and share my ideas with the world. Creating allows me to explore new concepts, challenge myself, and connect with others who appreciate my work. It is a way for me to leave a mark and contribute to the cultural landscape.';
+	}
+}
+
+let clickCount = 0;
+
+function revealNextAnswer() {
+	clickCount += 1;
+
+	if (clickCount === 1) {
+		showAnswer();
+	} else if (clickCount === 2) {
+		showAnswer2();
 	}
 }
 
@@ -39,4 +58,5 @@ if (container && original) {
 	container.addEventListener('click', createBurst);
 }
 
-document.addEventListener('click', showAnswer);
+
+document.addEventListener('click', revealNextAnswer);

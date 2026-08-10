@@ -27,10 +27,12 @@ body {
 .answer {
 	margin: 0 0 1rem;
 	font-size: 1.4rem;
+	color: #7ec8ff;
 }
 
-.answer {
-	color: #7ec8ff;
+.answer:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 a {
