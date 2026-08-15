@@ -98,3 +98,9 @@ a {
 		opacity: 0;
 	}
 }
+
+img {
+	width: 100vw;
+	heigt: 100vh;
+	object-fit: cover;
+	display: block;
